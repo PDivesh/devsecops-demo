@@ -6,7 +6,7 @@ on:
 
 permissions:
   contents: read
-  security-events: write   # ⭐ IMPORTANT FIX
+  security-events: write   
 
 jobs:
   devsecops:
@@ -39,6 +39,6 @@ jobs:
 
     # 5. Container Scan (Trivy)
     - name: Scan Docker Image
-      uses: aquasecurity/trivy-action@0.20.0
+      uses: aquasecurity/trivy-action@master
       with:
         image-ref: devsecops-demo
